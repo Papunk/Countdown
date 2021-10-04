@@ -8,23 +8,26 @@
 import SwiftUI
 
 struct TimerView: View {
-    @State var title = "Computer Time"
+    @ObservedObject var timer: TimerModel
+    let clock = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
     var body: some View {
         VStack {
-            Text(title).font(.title)
+            Text(timer.title)
+                .font(.title)
             Divider()
-            Circle()
-                .shadow(radius: 3, x: 0, y: 0)
+            Text("\(timer.h()):\(timer.m()):\(timer.s())")
+                .bold()
+                .onReceive(clock, perform: { _ in
+                    timer.decrement()
+                })
         }
-        .padding()
-        .frame(width: 200, height: 200)
-        .fixedSize()
+        .frame(width: 200, height: 100)
     }
 }
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView()
-            
+        TimerView(timer: TimerModel("Computer Time", h: 5, m: 30, s: 10))
     }
 }
