@@ -8,9 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var hasPicked = false
+    @State var h = ""
+    @State var m = ""
+    @State var s = ""
+    @State var text = ""
+    
     var body: some View {
-        VStack {
-            TimerView(timer: TimerModel("Computer Time", h: 0, m: 35, s: 0))
+        if hasPicked {
+            TimerView(timer: TimerModel(text, h: UInt8(h)!, m: UInt8(m)!, s: UInt8(s)!))
+        }
+        else {
+            VStack {
+                TextField("Enter name", text: $text)
+                TextField("Enter hours", text: $h)
+                TextField("Enter minutes", text: $m)
+                TextField("Enter seconds", text: $s)
+                Button(action: {
+                    hasPicked.toggle()
+                }, label: {
+                    Image(systemName: "play")
+                })
+            }
+            .padding()
         }
     }
 }
