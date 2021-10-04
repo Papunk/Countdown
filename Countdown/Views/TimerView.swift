@@ -13,10 +13,10 @@ struct TimerView: View {
 
     var body: some View {
         VStack {
-            Text(timer.title)
-                .font(.system(size: 30, weight: .bold,  design: .rounded))
-            Divider()
-            Text("\(timer.h()):\(timer.m()):\(timer.s())")
+//            Text(timer.title)
+//                .font(.system(size: 30, weight: .bold,  design: .rounded))
+//            Divider()
+            Text(timer.format())
                 .font(.system(size: 24, design: .monospaced))
                 .onReceive(clock, perform: { _ in
                     timer.decrement()

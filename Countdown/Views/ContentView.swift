@@ -8,15 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    let window = NSApp.windows.first
-    
     var body: some View {
         VStack {
-            TimerView(timer: TimerModel("Computer Time", h: 0, m: 30, s: 0))
+            TimerView(timer: TimerModel("Computer Time", h: 0, m: 35, s: 0))
         }
     }
-    
-
 }
 
 struct ContentView_Previews: PreviewProvider {

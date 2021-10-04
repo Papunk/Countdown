@@ -20,8 +20,12 @@ struct CountdownApp: App {
             CommandGroup(replacing: .newItem, addition: { })
         }
         Settings {
-            Text("Under construction")
-                .frame(width: 400, height: 50)
+            VStack {
+                Text("Under construction")
+                    .frame(width: 300, height: 80)
+                Image(systemName: "hammer")
+                Spacer()
+            }
         }
     }
 }
