@@ -7,56 +7,75 @@
 
 import AVFoundation
 
-// TODO make time class
 
 class TimerModel: ObservableObject {
     var title: String
     var children: [TimerModel]
     var parent: TimerModel?
-    var duration: (Int, Int, Int)
-    @Published var timeLeft: (Int, Int, Int)
+    var duration: Time
+    @Published var timeLeft: Time
     
-    init(_ title: String, h: Int, m: Int, s: Int) {
+    init(_ title: String, h: UInt8, m: UInt8, s: UInt8) {
         self.title = title
         children = []
         parent = nil
-        duration = (h, m, s)
-        timeLeft = (h, m, s)
+        duration = Time(h, m, s)
+        timeLeft = Time(h, m, s)
     }
     
-    func validTime(_ h: Int, _ m: Int, _ s: Int) -> Bool {
-        return true
-    }
+    func decrement() { timeLeft.decrement() }
+    func increment() { timeLeft.increment() }
+}
 
+/**
+ Models a time with an hours, minutes, and seconds
+ */
+class Time {
+    // times are not negative and won't be too big so small unsigned integers make sense
+    var h: UInt8
+    var m: UInt8
+    var s: UInt8
+    
+    init(_ h: UInt8, _ m: UInt8, _ s: UInt8) {
+        self.h = h
+        self.m = m
+        self.s = s
+    }
+    
+    /**
+     Formats the time as a string in hh:mm:ss format
+     */
+    func format() -> String {
+        return (h >= 10 ? "" : "0") + "\(h):" + (m >= 10 ? "" : "0") + "\(m):" + (s >= 10 ? "" : "0") + "\(s)"
+    }
+    
+    /**
+     Decrements the current time by one second
+     */
     func decrement() {
-        if s() > 0 {
-            timeLeft.2 -= 1
+        if s > 0 {
+            s -= 1
         }
         else {
-            if m() > 0 {
-                timeLeft.1 -= 1
+            if m > 0 {
+                m -= 1
             }
             else {
-                if h() > 0 {
-                    timeLeft.0 -= 1
+                if h > 0 {
+                    h -= 1
                 }
                 else {
                     return
                 }
-                timeLeft.1 = 59
+                m = 59
             }
-            timeLeft.2 = 59
+            s = 59
         }
     }
     
-    func h() -> Int { timeLeft.0 }
-    func m() -> Int { timeLeft.1 }
-    func s() -> Int { timeLeft.2 }
-}
-
-
-struct Time {
-    var h: UInt8
-    var m: UInt8
-    var s: UInt8
+    /**
+     Increments the current time by one second
+     */
+    func increment() {
+    }
 }
