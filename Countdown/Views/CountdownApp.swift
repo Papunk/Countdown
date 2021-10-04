@@ -40,8 +40,7 @@ struct WindowAccessor: NSViewRepresentable {
     func updateNSView(_ nsView: NSView, context: Context) {}
     
     func setUp() -> WindowAccessor {
-        window?.isOpaque = false
-        window?.backgroundColor = NSColor(red: 0, green: 0, blue: 0, alpha: 0.85)
+        window?.backgroundColor = NSColor(red: 0, green: 0, blue: 0, alpha: 0.8)
         return self
     }
 }

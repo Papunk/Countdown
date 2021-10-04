@@ -53,3 +53,10 @@ class TimerModel: ObservableObject {
     func m() -> Int { timeLeft.1 }
     func s() -> Int { timeLeft.2 }
 }
+
+
+struct Time {
+    var h: UInt8
+    var m: UInt8
+    var s: UInt8
+}

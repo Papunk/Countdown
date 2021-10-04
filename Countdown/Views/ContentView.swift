@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            TimerView(timer: TimerModel("Computer Time", h: 5, m: 0, s: 0))
+            TimerView(timer: TimerModel("Computer Time", h: 0, m: 30, s: 0))
         }
     }
     
