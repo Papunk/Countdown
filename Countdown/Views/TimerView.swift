@@ -22,7 +22,6 @@ struct TimerView: View {
                     timer.decrement()
                 })
         }
-        .frame(width: 250, height: 150)
     }
 }
 

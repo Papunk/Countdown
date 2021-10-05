@@ -17,7 +17,7 @@ struct CountdownApp: App {
                 .background(WindowAccessor(window: $window).setUp())
         }
         .commands {
-            CommandGroup(replacing: .newItem, addition: { })
+//            CommandGroup(replacing: .newItem, addition: { })
         }
         Settings {
             VStack {
