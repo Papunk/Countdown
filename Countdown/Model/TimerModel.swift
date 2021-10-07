@@ -13,6 +13,7 @@ class TimerModel: ObservableObject {
     var children: [TimerModel]
     var parent: TimerModel?
     var duration: (h: UInt8, m: UInt8, s: UInt8)
+    @Published var paused = false
     @Published var h: UInt8
     @Published var m: UInt8
     @Published var s: UInt8
@@ -62,6 +63,15 @@ class TimerModel: ObservableObject {
      Increments the current time by one second
      */
     func increment() {
+    }
+    
+    /**
+     Resets the timer to its initial value
+     */
+    func reset() {
+        h = duration.h
+        m = duration.m
+        s = duration.s
     }
 }
 

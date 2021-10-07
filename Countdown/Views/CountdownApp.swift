@@ -13,7 +13,7 @@ struct CountdownApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
                 .background(WindowAccessor(window: $window).setUp())
         }
         .commands {

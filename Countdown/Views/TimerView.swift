@@ -13,13 +13,26 @@ struct TimerView: View {
 
     var body: some View {
         VStack {
-            Text(timer.title)
-                .font(.system(size: 30, weight: .bold,  design: .rounded))
+            HStack {
+                Text(timer.title).font(.system(size: 30, weight: .bold,  design: .rounded))
+                Button(action: {
+                    timer.reset()
+                }, label: {
+                    Image(systemName: "arrow.counterclockwise")
+                })
+                Button(action: {
+                    timer.paused.toggle()
+                }, label: {
+                    Image(systemName: timer.paused ? "play" : "pause")
+                })
+            }
             Divider()
             Text(timer.format())
                 .font(.system(size: 24, design: .monospaced))
                 .onReceive(clock, perform: { _ in
-                    timer.decrement()
+                    if !timer.paused {
+                        timer.decrement()
+                    }
                 })
         }
     }
