@@ -15,17 +15,14 @@ struct TimerView: View {
         VStack {
             HStack {
                 Text(timer.title).font(.system(size: 30, weight: .bold,  design: .rounded))
-                Button(action: {
-                    timer.reset()
-                }, label: {
-                    Image(systemName: "arrow.counterclockwise")
-                })
-                Button(action: {
-                    timer.paused.toggle()
-                }, label: {
+                Spacer()
+                Button(action: { timer.reset() }, label: { Image(systemName: "arrow.counterclockwise") })
+                Button(action: { timer.paused.toggle() }, label: {
                     Image(systemName: timer.paused ? "play" : "pause")
+//                        .foregroundColor(timer.paused ? Color.primary : Color.pink)
                 })
             }
+            .padding()
             Divider()
             Text(timer.format())
                 .font(.system(size: 24, design: .monospaced))
