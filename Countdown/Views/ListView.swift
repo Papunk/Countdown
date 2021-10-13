@@ -9,13 +9,7 @@ import SwiftUI
 
 struct ListView: View {
     
-    @StateObject var handler = TimerHandler(
-        [
-            TimerModel("Computer Time", h: 4, m: 23, s: 0),
-            TimerModel("Work", h: 5, m: 0, s: 0),
-            TimerModel("Gaming", h: 1, m: 12, s: 0)
-        ]
-    )
+    @EnvironmentObject var handler: TimerHandler
     
     var body: some View {
         List {
@@ -24,8 +18,11 @@ struct ListView: View {
                     Text(timer.title)
                     Spacer()
                     Text(timer.format())
-                    Button(action: {}, label: {
-                        Image(systemName: "play")
+                    Button(action: {
+                        print(timer.paused)
+                        timer.paused.toggle()
+                    }, label: {
+                        Image(systemName: timer.paused ? "play" : "pause")
                     })
                 }
                 Divider()

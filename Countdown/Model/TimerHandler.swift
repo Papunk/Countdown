@@ -9,7 +9,7 @@ import Foundation
 
 class TimerHandler: ObservableObject {
     
-    var timerList: [TimerModel]
+    @Published var timerList: [TimerModel]
     
     init() {
         timerList = [TimerModel]()

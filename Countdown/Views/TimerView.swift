@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TimerView: View {
     @ObservedObject var timer: TimerModel
-    let clock = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let clock = Timer.publish(every: 1, on: .main, in: .common).autoconnect() // Consider having a single one of these
 
     var body: some View {
         VStack {
