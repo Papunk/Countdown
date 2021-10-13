@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct ListView: View {
+    
+    @StateObject var handler = TimerHandler()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(handler.timerList) { timer in
+                HStack {
+                    Text(timer.title)
+                    Spacer()
+                    Text(timer.format())
+                }
+            }
+        }
     }
 }
 

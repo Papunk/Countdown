@@ -7,6 +7,11 @@
 
 import Foundation
 
-class TimerHandler {
+class TimerHandler: ObservableObject {
     
+    var timerList: [TimerModel]
+    
+    init() {
+        timerList = [TimerModel]()
+    }
 }

@@ -8,7 +8,7 @@
 import AVFoundation
 import SwiftUI
 
-class TimerModel: ObservableObject {
+class TimerModel: ObservableObject, Identifiable {
     var title: String
     var children: [TimerModel]
     var parent: TimerModel?
@@ -17,6 +17,7 @@ class TimerModel: ObservableObject {
     @Published var h: UInt8
     @Published var m: UInt8
     @Published var s: UInt8
+    var ID: UUID
     
     init(_ title: String, h: UInt8, m: UInt8, s: UInt8) {
         self.title = title
@@ -26,6 +27,7 @@ class TimerModel: ObservableObject {
         self.h = h
         self.m = m
         self.s = s
+        self.ID = UUID()
     }
     
     /**
