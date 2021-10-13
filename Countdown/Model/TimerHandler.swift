@@ -14,4 +14,9 @@ class TimerHandler: ObservableObject {
     init() {
         timerList = [TimerModel]()
     }
+    
+    // for debug
+    init(_ list: [TimerModel]) {
+        timerList = list
+    }
 }

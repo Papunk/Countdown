@@ -8,19 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		EB98A1AA270AAEAC0062BFFF /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB98A1A9270AAEAC0062BFFF /* CountdownApp.swift */; };
-		EB98A1AC270AAEAC0062BFFF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB98A1AB270AAEAC0062BFFF /* MainView.swift */; };
 		EB98A1AE270AAEAF0062BFFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB98A1AD270AAEAF0062BFFF /* Assets.xcassets */; };
 		EB98A1B1270AAEAF0062BFFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB98A1B0270AAEAF0062BFFF /* Preview Assets.xcassets */; };
 		EB98A1BB270AB0770062BFFF /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB98A1BA270AB0770062BFFF /* TimerView.swift */; };
 		EB98A1BD270AB2440062BFFF /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB98A1BC270AB2440062BFFF /* TimerModel.swift */; };
 		EBE5769527168B2D007E9326 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE5769427168B2D007E9326 /* ListView.swift */; };
 		EBE5769727168B39007E9326 /* TimerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE5769627168B39007E9326 /* TimerHandler.swift */; };
+		EBE5769927168DAA007E9326 /* AddTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE5769827168DAA007E9326 /* AddTimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB98A1A6270AAEAC0062BFFF /* Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB98A1A9270AAEAC0062BFFF /* CountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownApp.swift; sourceTree = "<group>"; };
-		EB98A1AB270AAEAC0062BFFF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EB98A1AD270AAEAF0062BFFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB98A1B0270AAEAF0062BFFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EB98A1B2270AAEAF0062BFFF /* Countdown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Countdown.entitlements; sourceTree = "<group>"; };
@@ -28,6 +27,7 @@
 		EB98A1BC270AB2440062BFFF /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
 		EBE5769427168B2D007E9326 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		EBE5769627168B39007E9326 /* TimerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHandler.swift; sourceTree = "<group>"; };
+		EBE5769827168DAA007E9326 /* AddTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +90,9 @@
 			isa = PBXGroup;
 			children = (
 				EB98A1A9270AAEAC0062BFFF /* CountdownApp.swift */,
-				EB98A1AB270AAEAC0062BFFF /* MainView.swift */,
-				EB98A1BA270AB0770062BFFF /* TimerView.swift */,
 				EBE5769427168B2D007E9326 /* ListView.swift */,
+				EBE5769827168DAA007E9326 /* AddTimerView.swift */,
+				EB98A1BA270AB0770062BFFF /* TimerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,9 +168,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB98A1BB270AB0770062BFFF /* TimerView.swift in Sources */,
-				EB98A1AC270AAEAC0062BFFF /* MainView.swift in Sources */,
 				EBE5769527168B2D007E9326 /* ListView.swift in Sources */,
 				EB98A1AA270AAEAC0062BFFF /* CountdownApp.swift in Sources */,
+				EBE5769927168DAA007E9326 /* AddTimerView.swift in Sources */,
 				EBE5769727168B39007E9326 /* TimerHandler.swift in Sources */,
 				EB98A1BD270AB2440062BFFF /* TimerModel.swift in Sources */,
 			);

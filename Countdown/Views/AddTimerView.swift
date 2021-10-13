@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  AddTimerView.swift
 //  Countdown
 //
-//  Created by Pedro Pagán on 10/3/21.
+//  Created by Pedro Pagán on 10/12/21.
 //
 
 import SwiftUI
 
-struct MainView: View {
+struct AddTimerView: View {
     @State var hasPicked = false
     @State var h = ""
     @State var m = ""
@@ -38,8 +38,8 @@ struct MainView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct AddTimerView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        AddTimerView()
     }
 }
