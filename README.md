@@ -7,3 +7,5 @@ This app is currently under development. Future planned features are outlined be
 - [ ] Nested timers
 - [ ] Save states to disk
 - [ ] Timers survive quitting
+- [ ] Unnamed timers
+- [ ] Custom alerts
