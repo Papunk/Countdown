@@ -22,7 +22,7 @@ struct ListView: View {
                         print(timer.paused)
                         timer.paused.toggle()
                     }, label: {
-                        Image(systemName: timer.paused ? "play" : "pause")
+                        Image(systemName: timer.paused ? "play" : "stop")
                     })
                 }
                 Divider()

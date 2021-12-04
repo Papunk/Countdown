@@ -18,7 +18,7 @@ struct TimerView: View {
                 Spacer()
                 Button(action: { timer.reset() }, label: { Image(systemName: "arrow.counterclockwise") })
                 Button(action: { timer.paused.toggle() }, label: {
-                    Image(systemName: timer.paused ? "play" : "pause")
+                    Image(systemName: timer.paused ? "play" : "stop")
 //                        .foregroundColor(timer.paused ? Color.primary : Color.pink)
                 })
             }
