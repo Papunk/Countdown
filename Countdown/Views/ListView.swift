@@ -28,7 +28,21 @@ struct ListView: View {
                 Divider()
             }
         }
-        .frame(width: 300)
+        .toolbar {
+            ToolbarItemGroup(placement: .principal) {
+                Button(action: {}) {
+                    Image(systemName: "plus")
+                }
+                Spacer()
+                Button(action: {}) {
+                    Image(systemName: "pencil")
+                }
+                Button(action: {}) {
+                    Image(systemName: "stop.circle")
+                }
+
+            }
+        }
     }
 }
 
