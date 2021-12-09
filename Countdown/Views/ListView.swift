@@ -10,6 +10,7 @@ import SwiftUI
 struct ListView: View {
     
     @EnvironmentObject var handler: TimerHandler
+    @State var addingTimer = false
     
     var body: some View {
         List {
@@ -31,16 +32,18 @@ struct ListView: View {
         .toolbar {
             ToolbarItemGroup(placement: .principal) {
                 Button(action: {}) {
-                    Image(systemName: "plus")
-                }
-                Spacer()
-                Button(action: {}) {
                     Image(systemName: "pencil")
                 }
                 Button(action: {}) {
                     Image(systemName: "stop.circle")
                 }
-
+                Spacer()
+                Button(action: { addingTimer.toggle() }) {
+                    Image(systemName: "plus")
+                }
+                .sheet(isPresented: $addingTimer, onDismiss: {}) {
+                    NewTimerDialog(isShown: $addingTimer)
+                }
             }
         }
     }

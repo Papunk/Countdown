@@ -19,7 +19,7 @@ struct CountdownApp: App {
     )
 
     var body: some Scene {
-        WindowGroup("Timer List") {
+        WindowGroup {
             ListView()
 //                .navigationTitle("Hello")
 //                .background(WindowAccessor(window: $window).setUp())
@@ -29,6 +29,7 @@ struct CountdownApp: App {
                         window.standardWindowButton(.zoomButton)?.isEnabled = false
                     }
                 })
+                .frame(minWidth: 400, minHeight: 300)
         }
         .commands { CommandGroup(replacing: .newItem, addition: { }) }
 //        WindowGroup("Timer") {
