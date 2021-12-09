@@ -20,9 +20,11 @@ struct CountdownApp: App {
 
     var body: some Scene {
         WindowGroup("Timer List") {
-            ListView()
+//            ListView()
 //                .background(WindowAccessor(window: $window).setUp())
-                .environmentObject(handler)
+//                .environmentObject(handler)
+            TimerView(timer: handler.timerList[0])
+                .frame(width: 400, height: 150)
         }
         .commands { CommandGroup(replacing: .newItem, addition: { }) }
         WindowGroup("Timer") {
