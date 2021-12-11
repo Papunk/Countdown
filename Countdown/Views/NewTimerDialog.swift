@@ -20,15 +20,16 @@ struct NewTimerDialog: View {
             TextField("Name", text: $name)
             TextField("Duration", text: $name)
             HStack {
+                // Cancel Button
                 Button(action: {
-                    // clear the current timer and
                     isShown = false
                 }) {
                     Image(systemName: "trash")
                     Text("Cancel")
                 }
+                // Save Button
                 Button(action: {
-                    
+                    isShown = false
                 }) {
                     Image(systemName: "folder")
                     Text("Save")
@@ -36,7 +37,12 @@ struct NewTimerDialog: View {
             }
         }
         .padding()
-        .frame(minWidth: 175, minHeight: 175)
+        .frame(minWidth: 200, maxWidth: 300, minHeight: 175)
+    }
+    
+    
+    private func saveTimer() {
+        // TODO add the timer to the timerhandler
     }
 }
 
