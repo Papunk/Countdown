@@ -11,6 +11,9 @@ struct NewTimerDialog: View {
     
     @Binding var isShown: Bool
     @State var name = ""
+    @State var hours = ""
+    @State var minutes = ""
+    @State var seconds = ""
     @EnvironmentObject var handler: TimerHandler
     
     var body: some View {
@@ -18,7 +21,13 @@ struct NewTimerDialog: View {
             Text("New Timer").font(.title)
             Divider()
             TextField("Name", text: $name)
-            TextField("Duration", text: $name)
+            HStack {
+                TextField("00", text: $hours)
+                Text(":")
+                TextField("00", text: $minutes)
+                Text(":")
+                TextField("00", text: $seconds)
+            }
             HStack {
                 // Cancel Button
                 Button(action: {

@@ -10,13 +10,7 @@ import SwiftUI
 @main
 struct CountdownApp: App {
 //    @State private var window: NSWindow?
-    @ObservedObject var handler = TimerHandler(
-        [
-            TimerModel("Computer Time", h: 4, m: 23, s: 0),
-            TimerModel("Work", h: 5, m: 0, s: 0),
-            TimerModel("Gaming", h: 1, m: 12, s: 0)
-        ]
-    )
+    @ObservedObject var handler = TimerHandler()
 
     var body: some Scene {
         WindowGroup {
