@@ -38,7 +38,6 @@ struct NewTimerDialog: View {
                 }
                 // Save Button
                 Button(action: {
-                    isShown = false
                     saveTimer()
                 }) {
                     Image(systemName: "folder")
@@ -53,12 +52,11 @@ struct NewTimerDialog: View {
     
     
     private func saveTimer() {
-        // ensure that all fields are filled
-        // trim whitespace from name
-        handler.timerList.append(TimerModel(name, h: hours, m: minutes, s: seconds))
-        // TODO
-        // make the TimerModel take in string parameters
-        // generally improve the timer model
+        guard !name.isEmpty else { return }
+        guard !hours.isEmpty || !minutes.isEmpty || !seconds.isEmpty else { return }
+        name = name.trimmingCharacters(in: CharacterSet(charactersIn: " ")) // trim leading and trailing whitespace
+        handler.timerList.append(TimerModel(name, h: hours, m: minutes, s: seconds)) // add timer
+        isShown = false
     }
 }
 

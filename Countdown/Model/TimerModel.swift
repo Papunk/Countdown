@@ -38,6 +38,7 @@ class TimerModel: ObservableObject, Identifiable {
         let hNum = UInt8(Int(h) ?? 0)
         let mNum = UInt8(Int(m) ?? 0)
         let sNum = UInt8(Int(s) ?? 0)
+    
         
         duration = (hNum, mNum, sNum)
         self.h = hNum
@@ -97,9 +98,10 @@ class TimerModel: ObservableObject, Identifiable {
     /**
      
      */
-    private func normalize() {
-        
-    }
+//    private func normalize(_ h: UInt8, _ m: UInt8, _ s: UInt8) -> (h: UInt8, m: UInt8, s: UInt8) {
+//
+//        return (0,0,0)
+//    }
     
     /**
      Ensure that the parameters for hours, minutes, and seconds are valid
@@ -111,6 +113,13 @@ class TimerModel: ObservableObject, Identifiable {
         return true
     }
 }
+
+
+
+
+
+
+
 
 
 /**
