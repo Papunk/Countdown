@@ -22,11 +22,11 @@ struct NewTimerDialog: View {
             Divider()
             TextField("Name", text: $name)
             HStack {
-                TextField("00", text: $hours)
+                TextField("00", text: $hours) // hours
                 Text(":")
-                TextField("00", text: $minutes)
+                TextField("00", text: $minutes) // minutes
                 Text(":")
-                TextField("00", text: $seconds)
+                TextField("00", text: $seconds) // seconds
             }
             HStack {
                 // Cancel Button
@@ -39,6 +39,7 @@ struct NewTimerDialog: View {
                 // Save Button
                 Button(action: {
                     isShown = false
+                    saveTimer()
                 }) {
                     Image(systemName: "folder")
                     Text("Save")
@@ -47,11 +48,17 @@ struct NewTimerDialog: View {
         }
         .padding()
         .frame(minWidth: 200, maxWidth: 300, minHeight: 175)
+        .onExitCommand(perform: { isShown = false })
     }
     
     
     private func saveTimer() {
-        // TODO add the timer to the timerhandler
+        // ensure that all fields are filled
+        // trim whitespace from name
+        handler.timerList.append(TimerModel(name, h: hours, m: minutes, s: seconds))
+        // TODO
+        // make the TimerModel take in string parameters
+        // generally improve the timer model
     }
 }
 

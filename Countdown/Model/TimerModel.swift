@@ -30,6 +30,23 @@ class TimerModel: ObservableObject, Identifiable {
         self.ID = UUID()
     }
     
+    init(_ title: String, h: String, m: String, s: String) {
+        self.title = title
+        children = []
+        parent = nil
+        
+        let hNum = UInt8(Int(h) ?? 0)
+        let mNum = UInt8(Int(m) ?? 0)
+        let sNum = UInt8(Int(s) ?? 0)
+        
+        duration = (hNum, mNum, sNum)
+        self.h = hNum
+        self.m = mNum
+        self.s = sNum
+        self.ID = UUID()
+    }
+    
+    
     /**
      Formats the time as a string in hh:mm:ss format
      */
@@ -74,6 +91,24 @@ class TimerModel: ObservableObject, Identifiable {
         h = duration.h
         m = duration.m
         s = duration.s
+    }
+    
+    
+    /**
+     
+     */
+    private func normalize() {
+        
+    }
+    
+    /**
+     Ensure that the parameters for hours, minutes, and seconds are valid
+     */
+    private func validate(_ nums: UInt8...) -> Bool {
+        for num in nums {
+            // Do test
+        }
+        return true
     }
 }
 
