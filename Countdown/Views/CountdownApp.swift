@@ -26,14 +26,14 @@ struct CountdownApp: App {
                 .frame(minWidth: 400, minHeight: 300)
         }
         .commands { CommandGroup(replacing: .newItem, addition: { }) }
-//        WindowGroup("Timer") {
-//            ForEach(handler.timerList) { timer in
-//                if !timer.paused {
-//                    TimerView(timer: timer) // this may need to be a binding
-//                }
-//            }
-//        }
-//        .handlesExternalEvents(matching: Set(arrayLiteral: "OtherWindow"))
+        WindowGroup("Timer") {
+            ForEach(handler.timerList) { timer in
+                if !timer.paused {
+                    TimerView(timer: timer) // this may need to be a binding
+                }
+            }
+        }
+        .handlesExternalEvents(matching: Set(arrayLiteral: "OtherWindow"))
         Settings {
             VStack {
                 Text("Under construction")

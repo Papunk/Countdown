@@ -9,6 +9,7 @@ import Foundation
 
 class TimerHandler: ObservableObject {
     
+    @Published var numOfTopLevelTimers = 0
     @Published var timerList: [TimerModel]
     
     init() {
@@ -18,5 +19,10 @@ class TimerHandler: ObservableObject {
     // for debug
     init(_ list: [TimerModel]) {
         timerList = list
+    }
+    
+    func addTimer(_ t: TimerModel) {
+        numOfTopLevelTimers += 1
+        timerList.append(t)
     }
 }

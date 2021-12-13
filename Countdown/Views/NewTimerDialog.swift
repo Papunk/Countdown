@@ -48,6 +48,7 @@ struct NewTimerDialog: View {
         .padding()
         .frame(minWidth: 200, maxWidth: 300, minHeight: 175)
         .onExitCommand(perform: { isShown = false })
+        .onSubmit({ saveTimer() })
     }
     
     
@@ -55,7 +56,7 @@ struct NewTimerDialog: View {
         guard !name.isEmpty else { return }
         guard !hours.isEmpty || !minutes.isEmpty || !seconds.isEmpty else { return }
         name = name.trimmingCharacters(in: CharacterSet(charactersIn: " ")) // trim leading and trailing whitespace
-        handler.timerList.append(TimerModel(name, h: hours, m: minutes, s: seconds)) // add timer
+        handler.addTimer(TimerModel(name, h: hours, m: minutes, s: seconds)) // add timer
         isShown = false
     }
 }
