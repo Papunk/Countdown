@@ -44,6 +44,7 @@ struct ListView: View {
                 .sheet(isPresented: $addingTimer, onDismiss: {}) {
                     NewTimerDialog(isShown: $addingTimer)
                 }
+                .keyboardShortcut("n")
             }
         }
     }
