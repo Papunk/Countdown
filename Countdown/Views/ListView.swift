@@ -30,14 +30,13 @@ struct ListView: View {
             }
         }
         .toolbar {
-            ToolbarItemGroup(placement: .principal) {
+            ToolbarItemGroup(placement: .automatic) {
                 Button(action: {}) {
                     Image(systemName: "pencil")
                 }
                 Button(action: {}) {
                     Image(systemName: "stop.circle")
                 }
-                Spacer()
                 Button(action: { addingTimer.toggle() }) {
                     Image(systemName: "plus")
                 }

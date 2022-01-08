@@ -23,7 +23,7 @@ struct CountdownApp: App {
                         window.standardWindowButton(.zoomButton)?.isEnabled = false
                     }
                 })
-                .frame(minWidth: 400, minHeight: 300)
+                .frame(minWidth: 400, idealWidth: 400, minHeight: 300, idealHeight: 300)
         }
         .commands { CommandGroup(replacing: .newItem, addition: { }) }
         WindowGroup("Timer") {
