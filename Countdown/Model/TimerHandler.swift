@@ -7,22 +7,25 @@
 
 import Foundation
 
-class TimerHandler: ObservableObject {
-    
-    @Published var numOfTopLevelTimers = 0
-    @Published var timerList: [TimerModel]
-    
-    init() {
-        timerList = [TimerModel]()
-    }
-    
-    // for debug
-    init(_ list: [TimerModel]) {
-        timerList = list
-    }
-    
-    func addTimer(_ t: TimerModel) {
-        numOfTopLevelTimers += 1
-        timerList.append(t)
-    }
-}
+//class TimerHandler: ObservableObject {
+//    
+//    @Published 
+//    
+//    init() {
+//        timerList = [TimerModel]()
+//    }
+//    
+//    // for debug
+//    init(_ list: [TimerModel]) {
+//        timerList = list
+//    }
+//    
+//    // TODO dont allow duplicates
+//    func addTimer(_ t: TimerModel) {
+//        timerList.append(t)
+//    }
+//    
+//    func toggle(timer: TimerModel) {
+//        timerList.filter({ t in t.ID == timer.ID })[0].toggle()
+//    }
+//}

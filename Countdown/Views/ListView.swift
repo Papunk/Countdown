@@ -9,22 +9,28 @@ import SwiftUI
 
 struct ListView: View {
     
-    @EnvironmentObject var handler: TimerHandler
     @State var addingTimer = false
+    @State var timerList: [TimerModel] = []
     
     var body: some View {
         List {
-            ForEach(handler.timerList) { timer in
+            ForEach(timerList) { timer in
                 HStack {
                     Text(timer.title)
                     Spacer()
                     Text(timer.format())
                     Button(action: {
-                        print(timer.paused)
                         timer.paused.toggle()
                     }, label: {
-                        Image(systemName: timer.paused ? "play" : "stop")
+                        Image(systemName: timer.paused ? "play.fill" : "pause.fill")
                     })
+                    NavigationLink(destination: TimerView(timer: timer)) {
+                        Image(systemName: "rectangle.on.rectangle")
+                    }
+//                    Button(action: {
+//
+//                    }, label: {
+//                    })
                 }
                 Divider()
             }
@@ -41,7 +47,7 @@ struct ListView: View {
                     Image(systemName: "plus")
                 }
                 .sheet(isPresented: $addingTimer, onDismiss: {}) {
-                    NewTimerDialog(isShown: $addingTimer)
+                    NewTimerDialog(isShown: $addingTimer, timerList: $timerList)
                 }
                 .keyboardShortcut("n")
             }

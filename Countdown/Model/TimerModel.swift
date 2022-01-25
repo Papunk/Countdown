@@ -95,6 +95,11 @@ class TimerModel: ObservableObject, Identifiable {
     }
     
     
+    func toggle() {
+        self.paused.toggle()
+    }
+    
+    
     /**
      
      */

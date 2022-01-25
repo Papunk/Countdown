@@ -10,14 +10,12 @@ import SwiftUI
 @main
 struct CountdownApp: App {
 //    @State private var window: NSWindow?
-    @ObservedObject var handler = TimerHandler()
 
     var body: some Scene {
         WindowGroup {
             ListView()
 //                .navigationTitle("Hello")
 //                .background(WindowAccessor(window: $window).setUp())
-                .environmentObject(handler)
                 .onReceive(NotificationCenter.default.publisher(for: NSApplication.willUpdateNotification), perform: { _ in
                     for window in NSApplication.shared.windows {
                         window.standardWindowButton(.zoomButton)?.isEnabled = false
@@ -26,14 +24,14 @@ struct CountdownApp: App {
                 .frame(minWidth: 400, idealWidth: 400, minHeight: 300, idealHeight: 300)
         }
         .commands { CommandGroup(replacing: .newItem, addition: { }) }
-        WindowGroup("Timer") {
-            ForEach(handler.timerList) { timer in
-                if !timer.paused {
-                    TimerView(timer: timer) // this may need to be a binding
-                }
-            }
-        }
-        .handlesExternalEvents(matching: Set(arrayLiteral: "OtherWindow"))
+//        WindowGroup("Timer") {
+//            ForEach(handler.timerList) { timer in
+//                if !timer.paused {
+//                    TimerView(timer: timer) // this may need to be a binding
+//                }
+//            }
+//        }
+//        .handlesExternalEvents(matching: Set(arrayLiteral: "OtherWindow"))
         Settings {
             VStack {
                 Text("Under construction")

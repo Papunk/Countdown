@@ -10,11 +10,11 @@ import SwiftUI
 struct NewTimerDialog: View {
     
     @Binding var isShown: Bool
+    @Binding var timerList: [TimerModel]
     @State var name = ""
     @State var hours = ""
     @State var minutes = ""
     @State var seconds = ""
-    @EnvironmentObject var handler: TimerHandler
     
     var body: some View {
         Group {
@@ -56,13 +56,13 @@ struct NewTimerDialog: View {
         guard !name.isEmpty else { return }
         guard !hours.isEmpty || !minutes.isEmpty || !seconds.isEmpty else { return }
         name = name.trimmingCharacters(in: CharacterSet(charactersIn: " ")) // trim leading and trailing whitespace
-        handler.addTimer(TimerModel(name, h: hours, m: minutes, s: seconds)) // add timer
+        timerList.append(TimerModel(name, h: hours, m: minutes, s: seconds))
         isShown = false
     }
 }
 
 struct NewTimerDialog_Previews: PreviewProvider {
     static var previews: some View {
-        NewTimerDialog(isShown: .constant(true))
+        NewTimerDialog(isShown: .constant(true), timerList: .constant([]))
     }
 }
