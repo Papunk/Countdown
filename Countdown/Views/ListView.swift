@@ -12,7 +12,6 @@ struct ListView: View {
     @Binding var timerList: [TimerModel]
     
     var body: some View {
-
         List {
             ForEach(timerList) { timer in
                 HStack {
@@ -22,7 +21,7 @@ struct ListView: View {
                         Text(timer.format())
                     }
                 }
-                Divider()
+                .padding([.top, .bottom], 10)
             }
         }
         .listStyle(SidebarListStyle())

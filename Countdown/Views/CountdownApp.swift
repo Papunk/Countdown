@@ -20,6 +20,13 @@ struct CountdownApp: App {
                     .frame(minWidth: 200)
             }
             .toolbar {
+                ToolbarItem(placement:ToolbarItemPlacement.navigation) {
+                    Button(action: {
+                        NSApp.keyWindow?.firstResponder?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
+                    }, label: {
+                        Image(systemName: "sidebar.leading")
+                    })
+                }
                 ToolbarItemGroup(placement: .automatic) {
                     Button(action: {
                         for i in 0...5 { timerList.append(TimerModel("Test\(i)", h: UInt8(i), m: 0, s: 0)) }
