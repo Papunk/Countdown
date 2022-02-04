@@ -17,7 +17,6 @@
 		EBC9F5D527AC6EA100C3DC47 /* DataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC9F5D427AC6EA100C3DC47 /* DataWriter.swift */; };
 		EBE5769527168B2D007E9326 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE5769427168B2D007E9326 /* ListView.swift */; };
 		EBE5769727168B39007E9326 /* TimerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE5769627168B39007E9326 /* TimerHandler.swift */; };
-		EBE5769927168DAA007E9326 /* AddTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE5769827168DAA007E9326 /* AddTimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		EBC9F5D427AC6EA100C3DC47 /* DataWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWriter.swift; sourceTree = "<group>"; };
 		EBE5769427168B2D007E9326 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		EBE5769627168B39007E9326 /* TimerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHandler.swift; sourceTree = "<group>"; };
-		EBE5769827168DAA007E9326 /* AddTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +97,6 @@
 				EB98A1A9270AAEAC0062BFFF /* CountdownApp.swift */,
 				EBE5769427168B2D007E9326 /* ListView.swift */,
 				647CFD852762B100004ECA44 /* NewTimerDialog.swift */,
-				EBE5769827168DAA007E9326 /* AddTimerView.swift */,
 				EB98A1BA270AB0770062BFFF /* TimerView.swift */,
 			);
 			path = Views;
@@ -190,7 +187,6 @@
 				647CFD862762B100004ECA44 /* NewTimerDialog.swift in Sources */,
 				EBE5769527168B2D007E9326 /* ListView.swift in Sources */,
 				EB98A1AA270AAEAC0062BFFF /* CountdownApp.swift in Sources */,
-				EBE5769927168DAA007E9326 /* AddTimerView.swift in Sources */,
 				EBE5769727168B39007E9326 /* TimerHandler.swift in Sources */,
 				EB98A1BD270AB2440062BFFF /* TimerModel.swift in Sources */,
 			);
