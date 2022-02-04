@@ -22,7 +22,10 @@ struct ListView: View {
                         NavigationLink(destination: TimerView(timer: timer, clock: $masterClock)) {
                             Text(timer.title)
                             Spacer()
-                            Text(timer.format())
+                            Text(timer.format()).fontWeight(timer.isActive ? .bold : .regular)
+                                .onReceive(masterClock, perform: { _ in
+                                    if timer.isActive { timer.decrement() }
+                                })
                         }
                     }
                     .padding([.top, .bottom], 10)

@@ -5,7 +5,6 @@
 //  Created by Pedro Pagán on 10/3/21.
 //
 
-import AVFoundation
 import SwiftUI
 
 class TimerModel: ObservableObject, Identifiable {
@@ -13,7 +12,7 @@ class TimerModel: ObservableObject, Identifiable {
     var children: [TimerModel]
     var parent: TimerModel?
     var duration: (h: UInt8, m: UInt8, s: UInt8)
-    @Published var paused = false
+    @Published var isActive = false
     @Published var h: UInt8
     @Published var m: UInt8
     @Published var s: UInt8
@@ -39,7 +38,6 @@ class TimerModel: ObservableObject, Identifiable {
         let mNum = UInt8(Int(m) ?? 0)
         let sNum = UInt8(Int(s) ?? 0)
     
-        
         duration = (hNum, mNum, sNum)
         self.h = hNum
         self.m = mNum
@@ -80,12 +78,6 @@ class TimerModel: ObservableObject, Identifiable {
     }
     
     /**
-     Increments the current time by one second
-     */
-    func increment() {
-    }
-    
-    /**
      Resets the timer to its initial value
      */
     func reset() {
@@ -96,7 +88,7 @@ class TimerModel: ObservableObject, Identifiable {
     
     
     func toggle() {
-        self.paused.toggle()
+        self.isActive.toggle()
     }
     
     

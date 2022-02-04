@@ -18,20 +18,13 @@ struct TimerView: View {
                 Text(timer.title).font(.system(size: 30, weight: .bold,  design: .rounded))
                 Spacer()
                 Button(action: { timer.reset() }, label: { Image(systemName: "arrow.counterclockwise") })
-                Button(action: { timer.paused.toggle() }, label: {
-                    Image(systemName: timer.paused ? "play" : "stop")
-                        .foregroundColor(timer.paused ? Color.primary : Color.pink)
+                Button(action: { timer.isActive.toggle() }, label: {
+                    Text(timer.isActive ? "Stop" : "Start")
                 })
             }
             .padding()
             Divider()
-            Text(timer.format())
-                .font(.system(size: 24, design: .monospaced))
-                .onReceive(clock, perform: { _ in
-                    if !timer.paused {
-                        timer.decrement()
-                    }
-                })
+            Text(timer.format()).font(.system(size: 24, design: .monospaced))
         }
     }
 }
