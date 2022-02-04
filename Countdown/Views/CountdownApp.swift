@@ -28,11 +28,16 @@ struct CountdownApp: App {
                     })
                 }
                 ToolbarItemGroup(placement: .automatic) {
-                    Button(action: {
-                        for i in 0...5 { timerList.append(TimerModel("Test\(i)", h: UInt8(i), m: 0, s: 0)) }
-                    }, label: {
-                        Image(systemName: "ladybug")
-                    })
+                    // Debug button
+                    Menu(content: {
+                        Button(action: {
+                            for i in 0...5 { timerList.append(TimerModel("Test\(i)", h: UInt8(i), m: 0, s: 0)) }
+                        }, label: { Text("Add timers") })
+                        Button(action: {
+                            timerList.removeAll()
+                        }, label: { Text("Delete all timers") })
+                    }, label: { Image(systemName: "ladybug") })
+                    // Add button
                     Button(action: {
                         addingTimer.toggle()
                     }, label: {
@@ -74,7 +79,6 @@ struct CountdownApp: App {
 
 
 struct Tab: View {
-    
     var systemName: String
     var text: String
     

@@ -15,7 +15,7 @@ struct ListView: View {
 
     var body: some View {
         VStack {
-            Text("Clock is working: \(x)s").onReceive(masterClock, perform: { _ in x += 1 })
+            Text("Clock is working: \(x)s").bold().onReceive(masterClock, perform: { _ in x += 1 }).foregroundColor(.pink)
             List {
                 ForEach(timerList) { timer in
                     HStack {
