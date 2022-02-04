@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		647CFD862762B100004ECA44 /* NewTimerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CFD852762B100004ECA44 /* NewTimerDialog.swift */; };
+		EB4B33F227ACDB1C00B2B178 /* TimerHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4B33F127ACDB1C00B2B178 /* TimerHistoryView.swift */; };
+		EB4B33F527ACDEA000B2B178 /* GeneralSettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4B33F427ACDEA000B2B178 /* GeneralSettingsPage.swift */; };
 		EB98A1AA270AAEAC0062BFFF /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB98A1A9270AAEAC0062BFFF /* CountdownApp.swift */; };
 		EB98A1AE270AAEAF0062BFFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB98A1AD270AAEAF0062BFFF /* Assets.xcassets */; };
 		EB98A1B1270AAEAF0062BFFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB98A1B0270AAEAF0062BFFF /* Preview Assets.xcassets */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		647CFD852762B100004ECA44 /* NewTimerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTimerDialog.swift; sourceTree = "<group>"; };
+		EB4B33F127ACDB1C00B2B178 /* TimerHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHistoryView.swift; sourceTree = "<group>"; };
+		EB4B33F427ACDEA000B2B178 /* GeneralSettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsPage.swift; sourceTree = "<group>"; };
 		EB98A1A6270AAEAC0062BFFF /* Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB98A1A9270AAEAC0062BFFF /* CountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownApp.swift; sourceTree = "<group>"; };
 		EB98A1AD270AAEAF0062BFFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB4B33F327ACDE8100B2B178 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				EB4B33F427ACDEA000B2B178 /* GeneralSettingsPage.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		EB98A19D270AAEAC0062BFFF = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +110,8 @@
 				EBE5769427168B2D007E9326 /* ListView.swift */,
 				647CFD852762B100004ECA44 /* NewTimerDialog.swift */,
 				EB98A1BA270AB0770062BFFF /* TimerView.swift */,
+				EB4B33F127ACDB1C00B2B178 /* TimerHistoryView.swift */,
+				EB4B33F327ACDE8100B2B178 /* Settings */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,10 +199,12 @@
 				EBC9F5D527AC6EA100C3DC47 /* DataWriter.swift in Sources */,
 				EB98A1BB270AB0770062BFFF /* TimerView.swift in Sources */,
 				647CFD862762B100004ECA44 /* NewTimerDialog.swift in Sources */,
+				EB4B33F527ACDEA000B2B178 /* GeneralSettingsPage.swift in Sources */,
 				EBE5769527168B2D007E9326 /* ListView.swift in Sources */,
 				EB98A1AA270AAEAC0062BFFF /* CountdownApp.swift in Sources */,
 				EBE5769727168B39007E9326 /* TimerHandler.swift in Sources */,
 				EB98A1BD270AB2440062BFFF /* TimerModel.swift in Sources */,
+				EB4B33F227ACDB1C00B2B178 /* TimerHistoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

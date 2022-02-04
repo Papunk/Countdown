@@ -52,12 +52,34 @@ struct CountdownApp: App {
         
         
         Settings {
-            VStack {
-                Text("Under construction")
-                    .frame(width: 300, height: 80)
-                Image(systemName: "hammer")
-                Spacer()
+            TabView {
+                GeneralSettingsPage()
+                .tabItem {
+                    Tab(systemName: "gearshape", text: "General")
+                }
+                GeneralSettingsPage()
+                .tabItem {
+                    Tab(systemName: "paintbrush", text: "Customization")
+                }
+                GeneralSettingsPage()
+                .tabItem {
+                    Tab(systemName: "keyboard", text: "Shortcuts")
+                }
             }
+            .frame(width: 300, height: 300)
+
         }
+    }
+}
+
+
+struct Tab: View {
+    
+    var systemName: String
+    var text: String
+    
+    var body: some View {
+        Image(systemName: systemName)
+        Text(text)
     }
 }
