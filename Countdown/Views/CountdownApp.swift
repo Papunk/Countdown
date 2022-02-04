@@ -19,7 +19,6 @@ struct CountdownApp: App {
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
         .commands {
-            CommandGroup(replacing: .newItem, addition: { })
             SidebarCommands()
         }
         

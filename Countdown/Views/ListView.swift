@@ -21,11 +21,15 @@ struct ListView: View {
                 ForEach(timerList) { timer in
                     HStack {
                         NavigationLink(destination: TimerView(timer: timer, clock: $masterClock)) {
-                            Text(timer.title)
+                            Text(timer.title).fontWeight(.medium)
                             Spacer()
-                            Text(timer.format()).fontWeight(timer.isActive ? .bold : .regular)
+                            Text(timer.format()).fontWeight(timer.isActive ? .bold : .light)
                                 .onReceive(masterClock, perform: { _ in
-                                    if timer.isActive { timer.decrement() }
+                                    if timer.isActive {
+                                        if !timer.decrement() {
+                                            timer.isActive.toggle()
+                                        }
+                                    }
                                 })
                         }
                     }
