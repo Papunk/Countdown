@@ -15,6 +15,7 @@
 		EB98A1B1270AAEAF0062BFFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB98A1B0270AAEAF0062BFFF /* Preview Assets.xcassets */; };
 		EB98A1BB270AB0770062BFFF /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB98A1BA270AB0770062BFFF /* TimerView.swift */; };
 		EB98A1BD270AB2440062BFFF /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB98A1BC270AB2440062BFFF /* TimerModel.swift */; };
+		EBBD04A727AD9BA6007D732E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBBD04A527AD9BA6007D732E /* Model.xcdatamodeld */; };
 		EBC9F5D327AC6E9600C3DC47 /* DataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC9F5D227AC6E9600C3DC47 /* DataReader.swift */; };
 		EBC9F5D527AC6EA100C3DC47 /* DataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC9F5D427AC6EA100C3DC47 /* DataWriter.swift */; };
 		EBE5769527168B2D007E9326 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE5769427168B2D007E9326 /* ListView.swift */; };
@@ -32,6 +33,7 @@
 		EB98A1B2270AAEAF0062BFFF /* Countdown.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Countdown.entitlements; sourceTree = "<group>"; };
 		EB98A1BA270AB0770062BFFF /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		EB98A1BC270AB2440062BFFF /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		EBBD04A627AD9BA6007D732E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		EBC9F5D227AC6E9600C3DC47 /* DataReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataReader.swift; sourceTree = "<group>"; };
 		EBC9F5D427AC6EA100C3DC47 /* DataWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWriter.swift; sourceTree = "<group>"; };
 		EBE5769427168B2D007E9326 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				EBC9F5D227AC6E9600C3DC47 /* DataReader.swift */,
 				EBC9F5D427AC6EA100C3DC47 /* DataWriter.swift */,
+				EBBD04A527AD9BA6007D732E /* Model.xcdatamodeld */,
 			);
 			path = "Data Layer";
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				EB98A1AA270AAEAC0062BFFF /* CountdownApp.swift in Sources */,
 				EBE5769727168B39007E9326 /* TimerHandler.swift in Sources */,
 				EB98A1BD270AB2440062BFFF /* TimerModel.swift in Sources */,
+				EBBD04A727AD9BA6007D732E /* Model.xcdatamodeld in Sources */,
 				EB4B33F227ACDB1C00B2B178 /* TimerHistoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +412,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EBBD04A527AD9BA6007D732E /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EBBD04A627AD9BA6007D732E /* Model.xcdatamodel */,
+			);
+			currentVersion = EBBD04A627AD9BA6007D732E /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EB98A19E270AAEAC0062BFFF /* Project object */;
 }

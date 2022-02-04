@@ -11,14 +11,14 @@ class TimerModel: ObservableObject, Identifiable {
     var title: String
     var children: [TimerModel]
     var parent: TimerModel?
-    var duration: (h: UInt8, m: UInt8, s: UInt8)
+    var duration: (h: UInt16, m: UInt8, s: UInt8)
     @Published var isActive = false
-    @Published var h: UInt8
+    @Published var h: UInt16
     @Published var m: UInt8
     @Published var s: UInt8
     var ID: UUID
     
-    init(_ title: String, h: UInt8, m: UInt8, s: UInt8) {
+    init(_ title: String, h: UInt16, m: UInt8, s: UInt8) {
         self.title = title
         children = []
         parent = nil
@@ -34,7 +34,7 @@ class TimerModel: ObservableObject, Identifiable {
         children = []
         parent = nil
         
-        let hNum = UInt8(Int(h) ?? 0)
+        let hNum = UInt16(Int(h) ?? 0)
         let mNum = UInt8(Int(m) ?? 0)
         let sNum = UInt8(Int(s) ?? 0)
     
