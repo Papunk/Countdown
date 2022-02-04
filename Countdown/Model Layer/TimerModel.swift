@@ -111,12 +111,12 @@ class TimerModel: ObservableObject, Identifiable {
     /**
      Ensure that the parameters for hours, minutes, and seconds are valid
      */
-    private func validate(_ nums: UInt8...) -> Bool {
-        for num in nums {
-            // Do test
-        }
-        return true
-    }
+//    private func validate(_ nums: UInt8...) -> Bool {
+//        for num in nums {
+//            // Do test
+//        }
+//        return true
+//    }
 }
 
 
