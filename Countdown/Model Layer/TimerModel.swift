@@ -18,6 +18,8 @@ class TimerModel: ObservableObject, Identifiable {
     @Published var s: UInt8
     var ID: UUID
     
+    // TODO make initializer that takes the seconds and isActive
+    
     init(_ title: String, h: UInt16, m: UInt8, s: UInt8) {
         self.title = title
         children = []
@@ -33,6 +35,8 @@ class TimerModel: ObservableObject, Identifiable {
         self.title = title
         children = []
         parent = nil
+        
+        // TODO input validation
         
         let hNum = UInt16(Int(h) ?? 0)
         let mNum = UInt8(Int(m) ?? 0)
