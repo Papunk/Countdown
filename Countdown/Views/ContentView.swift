@@ -6,13 +6,18 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
     
     @State var timerList = [TimerModel]()
     @State var addingTimer = false
-    
-    let persistenceController = PersistenceController.shared
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(
+        entity: TimerData.entity(),
+        sortDescriptors: [NSSortDescriptor(keyPath: \TimerData.id, ascending: true)]
+    ) var savedTimers: FetchedResults<TimerData>
+    @State private var justLaunched = true
     
     var body: some View {
         NavigationView { ListView(timerList: $timerList).frame(minWidth: 225) }
@@ -46,6 +51,20 @@ struct ContentView: View {
                 .keyboardShortcut("n")
             }
         }
+        .onAppear(perform: {
+            if justLaunched {
+                fillTimers()
+                print("SavedTimers:")
+                for item in savedTimers {
+                    print(item.name!)
+                }
+            }
+            justLaunched.toggle()
+        })
+    }
+    
+    private func fillTimers() {
+        
     }
 }
 

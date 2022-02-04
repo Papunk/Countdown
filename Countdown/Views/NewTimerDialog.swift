@@ -15,6 +15,7 @@ struct NewTimerDialog: View {
     @State var hours = ""
     @State var minutes = ""
     @State var seconds = ""
+    @Environment(\.managedObjectContext) var managedObjectContext
     
     var body: some View {
         Group {
@@ -53,11 +54,20 @@ struct NewTimerDialog: View {
     
     
     private func saveTimer() {
+        // Add to list
         guard !name.isEmpty else { return }
         guard !hours.isEmpty || !minutes.isEmpty || !seconds.isEmpty else { return }
         name = name.trimmingCharacters(in: CharacterSet(charactersIn: " ")) // trim leading and trailing whitespace
         timerList.append(TimerModel(name, h: hours, m: minutes, s: seconds))
         isShown = false
+        // Save to data store
+        let timer = TimerData(context: managedObjectContext)
+        timer.name = name
+        timer.isActive = false
+        // these are temporary:
+        timer.duration = 0
+        timer.timeRemaining = 0
+        PersistenceController.shared.save()
     }
 }
 

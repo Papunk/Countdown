@@ -25,11 +25,7 @@ struct ListView: View {
                             Spacer()
                             Text(timer.format()).fontWeight(timer.isActive ? .bold : .light)
                                 .onReceive(masterClock, perform: { _ in
-                                    if timer.isActive {
-                                        if !timer.decrement() {
-                                            timer.isActive.toggle()
-                                        }
-                                    }
+                                    if timer.isActive { timer.decrement() }
                                 })
                         }
                     }

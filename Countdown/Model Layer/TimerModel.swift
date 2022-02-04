@@ -60,10 +60,9 @@ class TimerModel: ObservableObject, Identifiable {
     /**
      Decrements the current time by one second
      */
-    func decrement() -> Bool {
-        if s == 0 && m == 0 && h == 0 {
-            return false
-        }
+    func decrement() {
+        if s == 0 && m == 0 && h == 0 { isActive.toggle() }
+        
         if s > 0 {
             s -= 1
         }
@@ -76,13 +75,12 @@ class TimerModel: ObservableObject, Identifiable {
                     h -= 1
                 }
                 else {
-                    return true
+                    return
                 }
                 m = 59
             }
             s = 59
         }
-        return true
     }
     
     /**

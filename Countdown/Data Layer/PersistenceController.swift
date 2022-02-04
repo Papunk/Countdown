@@ -5,7 +5,7 @@
 //  Created by Pedro Pagán on 2/4/22.
 //
 
-import Foundation
+
 import CoreData
 
 
@@ -35,17 +35,16 @@ struct PersistenceController {
                 fatalError("Error: \(error.localizedDescription)")
             }
         }
-        
-        
-        func save() {
-            let context = container.viewContext
+    }
+    
+    func save() {
+        let context = container.viewContext
 
-            if context.hasChanges {
-                do {
-                    try context.save()
-                } catch {
-                    // Show some error here
-                }
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                // Show some error here
             }
         }
     }
