@@ -60,14 +60,14 @@ struct NewTimerDialog: View {
         name = name.trimmingCharacters(in: CharacterSet(charactersIn: " ")) // trim leading and trailing whitespace
         timerList.append(TimerModel(name, h: hours, m: minutes, s: seconds))
         isShown = false
-        // Save to data store
-        let timer = TimerData(context: managedObjectContext)
-        timer.name = name
-        timer.isActive = false
-        // these are temporary:
-        timer.duration = 0
-        timer.timeRemaining = 0
-        PersistenceController.shared.save()
+//        // Save to data store
+//        let timer = TimerData(context: managedObjectContext)
+//        timer.name = name
+//        timer.isActive = false
+//        // these are temporary:
+//        timer.duration = 0
+//        timer.timeRemaining = 0
+//        PersistenceController.shared.save()
     }
 }
 

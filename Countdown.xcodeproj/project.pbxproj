@@ -18,7 +18,7 @@
 		EB98A1BB270AB0770062BFFF /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB98A1BA270AB0770062BFFF /* TimerView.swift */; };
 		EB98A1BD270AB2440062BFFF /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB98A1BC270AB2440062BFFF /* TimerModel.swift */; };
 		EBBD04A727AD9BA6007D732E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBBD04A527AD9BA6007D732E /* Model.xcdatamodeld */; };
-		EBBD04AA27AD9FCA007D732E /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBD04A927AD9FCA007D732E /* PersistenceController.swift */; };
+		EBBD04AA27AD9FCA007D732E /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBD04A927AD9FCA007D732E /* DataController.swift */; };
 		EBE5769527168B2D007E9326 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE5769427168B2D007E9326 /* ListView.swift */; };
 		EBE5769727168B39007E9326 /* TimerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE5769627168B39007E9326 /* TimerHandler.swift */; };
 /* End PBXBuildFile section */
@@ -37,7 +37,7 @@
 		EB98A1BA270AB0770062BFFF /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		EB98A1BC270AB2440062BFFF /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
 		EBBD04A627AD9BA6007D732E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		EBBD04A927AD9FCA007D732E /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		EBBD04A927AD9FCA007D732E /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		EBE5769427168B2D007E9326 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		EBE5769627168B39007E9326 /* TimerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				EBBD04A527AD9BA6007D732E /* Model.xcdatamodeld */,
-				EBBD04A927AD9FCA007D732E /* PersistenceController.swift */,
+				EBBD04A927AD9FCA007D732E /* DataController.swift */,
 			);
 			path = "Data Layer";
 			sourceTree = "<group>";
@@ -212,7 +212,7 @@
 				EBBD04A727AD9BA6007D732E /* Model.xcdatamodeld in Sources */,
 				EB49F56D27ADB54400F2400C /* SettingsView.swift in Sources */,
 				EB4B33F227ACDB1C00B2B178 /* TimerHistoryView.swift in Sources */,
-				EBBD04AA27AD9FCA007D732E /* PersistenceController.swift in Sources */,
+				EBBD04AA27AD9FCA007D732E /* DataController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
