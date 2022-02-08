@@ -10,13 +10,13 @@ import CoreData
 
 struct ContentView: View {
     
-    @State var timerList = [TimerModel]()
     @State var addingTimer = false
-    
-    @FetchRequest(sortDescriptors: []) var timers: FetchedResults<TimerData>
-    
+    @Environment(\.managedObjectContext) var context
+    @FetchRequest(sortDescriptors: []) var timers: FetchedResults<TimerModel>
+
+
     var body: some View {
-        NavigationView { ListView(timerList: $timerList).frame(minWidth: 225) }
+        NavigationView { ListView().frame(minWidth: 225) }
         .toolbar {
             ToolbarItem(placement:ToolbarItemPlacement.navigation) {
                 Button(action: {
@@ -29,10 +29,17 @@ struct ContentView: View {
                 // Debug button
                 Menu(content: {
                     Button(action: {
-                        for i in 0...5 { timerList.append(TimerModel("Test\(i)", h: UInt16(i), m: 0, s: 0)) }
+                        for i in 0...5 {
+                            let timer = TimerModel(context: context)
+                            TimerModel.fill(object: timer, name: "Test\(i)", duration: i * 3600)
+                        }
+                        try? context.save()
                     }, label: { Text("Add timers") })
                     Button(action: {
-                        timerList.removeAll()
+                        for obj in timers {
+                            context.delete(obj)
+                        }
+                        try? context.save()
                     }, label: { Text("Delete all timers") })
                 }, label: { Image(systemName: "ladybug") })
                 // Add button
@@ -42,7 +49,7 @@ struct ContentView: View {
                     Image(systemName: "plus")
                 })
                 .sheet(isPresented: $addingTimer, onDismiss: {}) {
-                    NewTimerDialog(isShown: $addingTimer, timerList: $timerList)
+                    NewTimerDialog(isShown: $addingTimer)
                 }
                 .keyboardShortcut("n")
             }

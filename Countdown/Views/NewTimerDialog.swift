@@ -10,13 +10,12 @@ import SwiftUI
 struct NewTimerDialog: View {
     
     @Binding var isShown: Bool
-    @Binding var timerList: [TimerModel]
     @State var name = ""
     @State var hours = ""
     @State var minutes = ""
     @State var seconds = ""
-    @Environment(\.managedObjectContext) var managedObjectContext
-    
+    @Environment(\.managedObjectContext) var context
+
     var body: some View {
         Group {
             Text("New Timer").font(.title)
@@ -52,27 +51,22 @@ struct NewTimerDialog: View {
         .onSubmit({ saveTimer() })
     }
     
-    
     private func saveTimer() {
-        // Add to list
+        // validation
         guard !name.isEmpty else { return }
         guard !hours.isEmpty || !minutes.isEmpty || !seconds.isEmpty else { return }
+        // storing values
+        let timer = TimerModel(context: context)
         name = name.trimmingCharacters(in: CharacterSet(charactersIn: " ")) // trim leading and trailing whitespace
-        timerList.append(TimerModel(name, h: hours, m: minutes, s: seconds))
+        let time = TimerModel.getAbsoluteTime(h: hours, m: minutes, s: seconds)
+        TimerModel.fill(object: timer, name: name, duration: time)
+        try? context.save()
         isShown = false
-//        // Save to data store
-//        let timer = TimerData(context: managedObjectContext)
-//        timer.name = name
-//        timer.isActive = false
-//        // these are temporary:
-//        timer.duration = 0
-//        timer.timeRemaining = 0
-//        PersistenceController.shared.save()
     }
 }
 
 struct NewTimerDialog_Previews: PreviewProvider {
     static var previews: some View {
-        NewTimerDialog(isShown: .constant(true), timerList: .constant([]))
+        NewTimerDialog(isShown: .constant(true))
     }
 }

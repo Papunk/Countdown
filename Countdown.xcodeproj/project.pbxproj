@@ -20,7 +20,6 @@
 		EBBD04A727AD9BA6007D732E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBBD04A527AD9BA6007D732E /* Model.xcdatamodeld */; };
 		EBBD04AA27AD9FCA007D732E /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBD04A927AD9FCA007D732E /* DataController.swift */; };
 		EBE5769527168B2D007E9326 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE5769427168B2D007E9326 /* ListView.swift */; };
-		EBE5769727168B39007E9326 /* TimerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE5769627168B39007E9326 /* TimerHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +38,6 @@
 		EBBD04A627AD9BA6007D732E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		EBBD04A927AD9FCA007D732E /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		EBE5769427168B2D007E9326 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		EBE5769627168B39007E9326 /* TimerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				EBC9F5D127AC6E6100C3DC47 /* Data Layer */,
-				EB98A1B8270AAF670062BFFF /* Model Layer */,
 				EB98A1B9270AAF750062BFFF /* Views */,
 				EB98A1AD270AAEAF0062BFFF /* Assets.xcassets */,
 				EB98A1B2270AAEAF0062BFFF /* Countdown.entitlements */,
@@ -96,15 +93,6 @@
 				EB98A1B0270AAEAF0062BFFF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		EB98A1B8270AAF670062BFFF /* Model Layer */ = {
-			isa = PBXGroup;
-			children = (
-				EB98A1BC270AB2440062BFFF /* TimerModel.swift */,
-				EBE5769627168B39007E9326 /* TimerHandler.swift */,
-			);
-			path = "Model Layer";
 			sourceTree = "<group>";
 		};
 		EB98A1B9270AAF750062BFFF /* Views */ = {
@@ -127,6 +115,7 @@
 			children = (
 				EBBD04A527AD9BA6007D732E /* Model.xcdatamodeld */,
 				EBBD04A927AD9FCA007D732E /* DataController.swift */,
+				EB98A1BC270AB2440062BFFF /* TimerModel.swift */,
 			);
 			path = "Data Layer";
 			sourceTree = "<group>";
@@ -207,7 +196,6 @@
 				EB4B33F527ACDEA000B2B178 /* GeneralSettingsPage.swift in Sources */,
 				EBE5769527168B2D007E9326 /* ListView.swift in Sources */,
 				EB98A1AA270AAEAC0062BFFF /* CountdownApp.swift in Sources */,
-				EBE5769727168B39007E9326 /* TimerHandler.swift in Sources */,
 				EB98A1BD270AB2440062BFFF /* TimerModel.swift in Sources */,
 				EBBD04A727AD9BA6007D732E /* Model.xcdatamodeld in Sources */,
 				EB49F56D27ADB54400F2400C /* SettingsView.swift in Sources */,

@@ -9,19 +9,20 @@ import SwiftUI
 
 struct ListView: View {
     
-    @Binding var timerList: [TimerModel]
     @State var masterClock = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var x = 0
+    
+    @FetchRequest(sortDescriptors: []) var timers: FetchedResults<TimerModel>
 
     
     var body: some View {
         VStack {
             Text("Clock is working: \(x)s").bold().onReceive(masterClock, perform: { _ in x += 1 }).foregroundColor(.pink)
             List {
-                ForEach(timerList) { timer in
+                ForEach(timers) { timer in
                     HStack {
                         NavigationLink(destination: TimerView(timer: timer, clock: $masterClock)) {
-                            Text(timer.title).fontWeight(.medium)
+                            Text(timer.name!).fontWeight(.medium)
                             Spacer()
                             Text(timer.format()).fontWeight(timer.isActive ? .bold : .light)
                                 .onReceive(masterClock, perform: { _ in
@@ -39,6 +40,6 @@ struct ListView: View {
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView(timerList: .constant([]))
+        ListView()
     }
 }

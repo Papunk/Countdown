@@ -15,7 +15,7 @@ struct TimerView: View {
     var body: some View {
         VStack {
             HStack {
-                Text(timer.title).font(.system(size: 30, weight: .bold,  design: .rounded))
+                Text(timer.name!).font(.system(size: 30, weight: .bold,  design: .rounded))
                 Spacer()
                 Button(action: { timer.reset() }, label: { Image(systemName: "arrow.counterclockwise") })
                 Button(action: { timer.isActive.toggle() }, label: {
@@ -31,6 +31,6 @@ struct TimerView: View {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(timer: TimerModel("Computer Time", h: 5, m: 30, s: 10), clock: .constant(Timer.publish(every: 1, on: .main, in: .common).autoconnect()))
+        TimerView(timer: TimerModel(), clock: .constant(Timer.publish(every: 1, on: .main, in: .common).autoconnect()))
     }
 }
