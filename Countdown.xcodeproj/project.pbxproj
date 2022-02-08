@@ -54,6 +54,7 @@
 		EB4B33F327ACDE8100B2B178 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				EB49F56C27ADB54400F2400C /* SettingsView.swift */,
 				EB4B33F427ACDEA000B2B178 /* GeneralSettingsPage.swift */,
 			);
 			path = Settings;
@@ -104,7 +105,6 @@
 				647CFD852762B100004ECA44 /* NewTimerDialog.swift */,
 				EB98A1BA270AB0770062BFFF /* TimerView.swift */,
 				EB4B33F127ACDB1C00B2B178 /* TimerHistoryView.swift */,
-				EB49F56C27ADB54400F2400C /* SettingsView.swift */,
 				EB4B33F327ACDE8100B2B178 /* Settings */,
 			);
 			path = Views;
