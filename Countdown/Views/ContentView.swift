@@ -12,11 +12,10 @@ struct ContentView: View {
     
     @State var addingTimer = false
     @Environment(\.managedObjectContext) var context
-    @FetchRequest(sortDescriptors: []) var timers: FetchedResults<TimerModel>
-
+    @FetchRequest(sortDescriptors: []) var timers: FetchedResults<TimerModel> //TODO figure out how to use only one fetch request for all views that need it
 
     var body: some View {
-        NavigationView { ListView().frame(minWidth: 225) }
+        NavigationView { ListView().frame(minWidth: 230) }
         .toolbar {
             ToolbarItem(placement:ToolbarItemPlacement.navigation) {
                 Button(action: {
@@ -54,20 +53,6 @@ struct ContentView: View {
                 .keyboardShortcut("n")
             }
         }
-//        .onAppear(perform: {
-//            if justLaunched {
-//                fillTimers()
-//                print("SavedTimers:")
-//                for item in savedTimers {
-//                    print(item.name!)
-//                }
-//            }
-//            justLaunched.toggle()
-//        })
-    }
-    
-    private func fillTimers() {
-        
     }
 }
 
