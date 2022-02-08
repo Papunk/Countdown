@@ -25,8 +25,10 @@ struct ListView: View {
                             Spacer()
                             Text(timer.format()).fontWeight(timer.isActive ? .bold : .light)
                                 .onReceive(masterClock, perform: { t in
-                                    if timer.isActive { timer.decrement() }
-                                    print(t.formatted(.iso8601))
+                                    if timer.isActive {
+                                        timer.decrement()
+//                                        print(t.formatted(.iso8601))
+                                    }
                                 })
                         }
                     }

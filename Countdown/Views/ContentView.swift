@@ -8,6 +8,12 @@
 import SwiftUI
 import CoreData
 
+
+
+// TODO Next up: split view hierarchies
+
+
+
 struct ContentView: View {
     
     @State var addingTimer = false

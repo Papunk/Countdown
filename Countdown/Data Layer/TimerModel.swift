@@ -37,6 +37,9 @@ extension TimerModel {
         if self.timeRemaining != 0 {
             self.timeRemaining -= 1
         }
+        else {
+            toggle()
+        }
     }
     
     /**

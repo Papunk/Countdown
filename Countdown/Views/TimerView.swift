@@ -13,18 +13,20 @@ struct TimerView: View {
     @Binding var clock: Publishers.Autoconnect<Timer.TimerPublisher>
 
     var body: some View {
-        VStack {
-            HStack {
-                Text(timer.name!).font(.system(size: 30, weight: .bold,  design: .rounded))
-                Spacer()
-                Button(action: { timer.reset() }, label: { Image(systemName: "arrow.counterclockwise") })
-                Button(action: { timer.isActive.toggle() }, label: {
-                    Text(timer.isActive ? "Stop" : "Start")
-                })
+        if let name = timer.name {
+            VStack {
+                HStack {
+                    Text(name).font(.system(size: 30, weight: .bold,  design: .rounded))
+                    Spacer()
+                    Button(action: { timer.reset() }, label: { Image(systemName: "arrow.counterclockwise") })
+                    Button(action: { timer.isActive.toggle() }, label: {
+                        Text(timer.isActive ? "Stop" : "Start")
+                    })
+                }
+                .padding()
+                Divider()
+                Text(timer.format()).font(.system(size: 24, design: .monospaced))
             }
-            .padding()
-            Divider()
-            Text(timer.format()).font(.system(size: 24, design: .monospaced))
         }
     }
 }
