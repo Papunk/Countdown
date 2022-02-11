@@ -47,7 +47,7 @@ extension TimerModel {
      */
     public func reset(_ toggle: Bool = true) {
         if toggle {
-            self.toggle()
+            self.isActive = false
         }
         self.timeRemaining = self.duration
     }

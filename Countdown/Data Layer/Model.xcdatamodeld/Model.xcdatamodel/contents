@@ -8,6 +8,6 @@
         <attribute name="timeRemaining" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="TimerModel" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="TimerModel" positionX="-63" positionY="-18" width="177.25" height="104"/>
     </elements>
 </model>

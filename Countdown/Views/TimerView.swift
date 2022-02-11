@@ -16,12 +16,29 @@ struct TimerView: View {
         if let name = timer.name {
             VStack(alignment: .leading) {
                 HStack {
-                    Text(name).font(.system(size: 30, weight: .bold,  design: .rounded))
+                    Text(name).font(.system(size: 30, weight: .bold,  design: .default))
                     Spacer()
-                    Button(action: { timer.reset() }, label: { Image(systemName: "arrow.counterclockwise") })
-                    Button(action: { timer.isActive.toggle() }, label: {
-                        Text(timer.isActive ? "Stop" : "Start")
-                    })
+                    // TODO make a struct for this type of button
+                    Group {
+                        Button(action: { timer.reset() }, label: {
+                            Image(systemName: "arrow.counterclockwise")
+                                .font(.system(size: 14, weight: .heavy))
+                                .frame(width: 10, height: 10)
+                                .padding()
+                        })
+                            .disabled(!timer.isActive)
+                            .background(.secondary)
+                        Button(action: { timer.isActive.toggle() }, label: {
+                            Text(timer.isActive ? "Pause" : "Start").fontWeight(.semibold)
+                                .frame(width: 40, height: 10)
+                                .padding()
+                        })
+
+                            .background(timer.isActive ? .red : .blue)
+                    }
+                    .buttonStyle(.borderless)
+                    .foregroundColor(.primary)
+                    .cornerRadius(10)
                 }
                 Divider()
                 Text(timer.format()).font(.system(size: 24, design: .monospaced))
