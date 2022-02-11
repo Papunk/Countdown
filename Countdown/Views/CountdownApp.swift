@@ -28,14 +28,3 @@ struct CountdownApp: App {
         }
     }
 }
-
-
-struct Tab: View {
-    var systemName: String
-    var text: String
-    
-    var body: some View {
-        Image(systemName: systemName)
-        Text(text)
-    }
-}

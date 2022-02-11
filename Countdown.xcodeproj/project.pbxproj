@@ -10,7 +10,6 @@
 		647CFD862762B100004ECA44 /* NewTimerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CFD852762B100004ECA44 /* NewTimerDialog.swift */; };
 		EB49F56B27ADB42000F2400C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49F56A27ADB42000F2400C /* ContentView.swift */; };
 		EB49F56D27ADB54400F2400C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49F56C27ADB54400F2400C /* SettingsView.swift */; };
-		EB4B33F227ACDB1C00B2B178 /* TimerHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4B33F127ACDB1C00B2B178 /* TimerHistoryView.swift */; };
 		EB4B33F527ACDEA000B2B178 /* GeneralSettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4B33F427ACDEA000B2B178 /* GeneralSettingsPage.swift */; };
 		EB98A1AA270AAEAC0062BFFF /* CountdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB98A1A9270AAEAC0062BFFF /* CountdownApp.swift */; };
 		EB98A1AE270AAEAF0062BFFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB98A1AD270AAEAF0062BFFF /* Assets.xcassets */; };
@@ -26,7 +25,6 @@
 		647CFD852762B100004ECA44 /* NewTimerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTimerDialog.swift; sourceTree = "<group>"; };
 		EB49F56A27ADB42000F2400C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EB49F56C27ADB54400F2400C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		EB4B33F127ACDB1C00B2B178 /* TimerHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHistoryView.swift; sourceTree = "<group>"; };
 		EB4B33F427ACDEA000B2B178 /* GeneralSettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsPage.swift; sourceTree = "<group>"; };
 		EB98A1A6270AAEAC0062BFFF /* Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB98A1A9270AAEAC0062BFFF /* CountdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownApp.swift; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 				EBE5769427168B2D007E9326 /* ListView.swift */,
 				647CFD852762B100004ECA44 /* NewTimerDialog.swift */,
 				EB98A1BA270AB0770062BFFF /* TimerView.swift */,
-				EB4B33F127ACDB1C00B2B178 /* TimerHistoryView.swift */,
 				EB4B33F327ACDE8100B2B178 /* Settings */,
 			);
 			path = Views;
@@ -199,7 +196,6 @@
 				EB98A1BD270AB2440062BFFF /* TimerModel.swift in Sources */,
 				EBBD04A727AD9BA6007D732E /* Model.xcdatamodeld in Sources */,
 				EB49F56D27ADB54400F2400C /* SettingsView.swift in Sources */,
-				EB4B33F227ACDB1C00B2B178 /* TimerHistoryView.swift in Sources */,
 				EBBD04AA27AD9FCA007D732E /* DataController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,6 +26,16 @@ struct SettingsView: View {
     }
 }
 
+struct Tab: View {
+    var systemName: String
+    var text: String
+    
+    var body: some View {
+        Image(systemName: systemName)
+        Text(text)
+    }
+}
+
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
