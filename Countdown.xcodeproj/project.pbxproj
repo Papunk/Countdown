@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		647CFD862762B100004ECA44 /* NewTimerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CFD852762B100004ECA44 /* NewTimerDialog.swift */; };
+		EB3F961327B5FA40002012AB /* TimerHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3F961227B5FA40002012AB /* TimerHistory.swift */; };
 		EB49F56B27ADB42000F2400C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49F56A27ADB42000F2400C /* ContentView.swift */; };
 		EB49F56D27ADB54400F2400C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49F56C27ADB54400F2400C /* SettingsView.swift */; };
 		EB4B33F527ACDEA000B2B178 /* GeneralSettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4B33F427ACDEA000B2B178 /* GeneralSettingsPage.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		647CFD852762B100004ECA44 /* NewTimerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTimerDialog.swift; sourceTree = "<group>"; };
+		EB3F961227B5FA40002012AB /* TimerHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHistory.swift; sourceTree = "<group>"; };
 		EB49F56A27ADB42000F2400C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EB49F56C27ADB54400F2400C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		EB4B33F427ACDEA000B2B178 /* GeneralSettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsPage.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				EBE5769427168B2D007E9326 /* ListView.swift */,
 				647CFD852762B100004ECA44 /* NewTimerDialog.swift */,
 				EB98A1BA270AB0770062BFFF /* TimerView.swift */,
+				EB3F961227B5FA40002012AB /* TimerHistory.swift */,
 				EB4B33F327ACDE8100B2B178 /* Settings */,
 			);
 			path = Views;
@@ -195,6 +198,7 @@
 				EB98A1AA270AAEAC0062BFFF /* CountdownApp.swift in Sources */,
 				EB98A1BD270AB2440062BFFF /* TimerModel.swift in Sources */,
 				EBBD04A727AD9BA6007D732E /* Model.xcdatamodeld in Sources */,
+				EB3F961327B5FA40002012AB /* TimerHistory.swift in Sources */,
 				EB49F56D27ADB54400F2400C /* SettingsView.swift in Sources */,
 				EBBD04AA27AD9FCA007D732E /* DataController.swift in Sources */,
 			);

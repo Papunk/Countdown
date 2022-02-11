@@ -14,7 +14,7 @@ struct TimerView: View {
 
     var body: some View {
         if let name = timer.name {
-            VStack {
+            VStack(alignment: .leading) {
                 HStack {
                     Text(name).font(.system(size: 30, weight: .bold,  design: .rounded))
                     Spacer()
@@ -23,11 +23,15 @@ struct TimerView: View {
                         Text(timer.isActive ? "Stop" : "Start")
                     })
                 }
-                .padding()
                 Divider()
                 Text(timer.format()).font(.system(size: 24, design: .monospaced))
+                TimerHistory()
+                    .environmentObject(timer)
             }
             .padding()
+        }
+        else {
+            Text("Timer deleted. Undo?").foregroundColor(.secondary)
         }
     }
 }
