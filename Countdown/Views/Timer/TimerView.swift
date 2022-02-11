@@ -20,6 +20,7 @@ struct TimerView: View {
                     Spacer()
                     // TODO make a struct for this type of button
                     Group {
+                        // TODO make this button look disabled when it has to
                         Button(action: { timer.reset() }, label: {
                             Image(systemName: "arrow.counterclockwise")
                                 .font(.system(size: 14, weight: .heavy))
@@ -27,14 +28,14 @@ struct TimerView: View {
                                 .padding()
                         })
                             .disabled(!timer.isActive)
-                            .background(.secondary)
+                            .background(Color.secondary.opacity(0.5))
                         Button(action: { timer.isActive.toggle() }, label: {
                             Text(timer.isActive ? "Pause" : "Start").fontWeight(.semibold)
                                 .frame(width: 40, height: 10)
                                 .padding()
                         })
 
-                            .background(timer.isActive ? .red : .blue)
+                            .background(timer.isActive ? .red.opacity(0.8) : .blue.opacity(0.8))
                     }
                     .buttonStyle(.borderless)
                     .foregroundColor(.primary)
@@ -42,8 +43,11 @@ struct TimerView: View {
                 }
                 Divider()
                 Text(timer.format()).font(.system(size: 24, design: .monospaced))
-                TimerHistory()
-                    .environmentObject(timer)
+                TabView {
+                    TimerHistory().tabItem({ Text("Log") })
+                    TimerOptions().tabItem({ Text("Options") })
+                }
+                .environmentObject(timer)
             }
             .padding()
         }

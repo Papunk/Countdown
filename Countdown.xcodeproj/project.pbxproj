@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		647CFD862762B100004ECA44 /* NewTimerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647CFD852762B100004ECA44 /* NewTimerDialog.swift */; };
 		EB3F961327B5FA40002012AB /* TimerHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3F961227B5FA40002012AB /* TimerHistory.swift */; };
+		EB3F961627B60D8E002012AB /* TimerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3F961527B60D8E002012AB /* TimerOptions.swift */; };
 		EB49F56B27ADB42000F2400C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49F56A27ADB42000F2400C /* ContentView.swift */; };
 		EB49F56D27ADB54400F2400C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49F56C27ADB54400F2400C /* SettingsView.swift */; };
 		EB4B33F527ACDEA000B2B178 /* GeneralSettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4B33F427ACDEA000B2B178 /* GeneralSettingsPage.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		647CFD852762B100004ECA44 /* NewTimerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTimerDialog.swift; sourceTree = "<group>"; };
 		EB3F961227B5FA40002012AB /* TimerHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHistory.swift; sourceTree = "<group>"; };
+		EB3F961527B60D8E002012AB /* TimerOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerOptions.swift; sourceTree = "<group>"; };
 		EB49F56A27ADB42000F2400C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EB49F56C27ADB54400F2400C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		EB4B33F427ACDEA000B2B178 /* GeneralSettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsPage.swift; sourceTree = "<group>"; };
@@ -51,6 +53,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB3F961427B60D78002012AB /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				EB98A1BA270AB0770062BFFF /* TimerView.swift */,
+				EB3F961227B5FA40002012AB /* TimerHistory.swift */,
+				EB3F961527B60D8E002012AB /* TimerOptions.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
 		EB4B33F327ACDE8100B2B178 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +115,7 @@
 				EB49F56A27ADB42000F2400C /* ContentView.swift */,
 				EBE5769427168B2D007E9326 /* ListView.swift */,
 				647CFD852762B100004ECA44 /* NewTimerDialog.swift */,
-				EB98A1BA270AB0770062BFFF /* TimerView.swift */,
-				EB3F961227B5FA40002012AB /* TimerHistory.swift */,
+				EB3F961427B60D78002012AB /* Timer */,
 				EB4B33F327ACDE8100B2B178 /* Settings */,
 			);
 			path = Views;
@@ -192,6 +203,7 @@
 			files = (
 				EB98A1BB270AB0770062BFFF /* TimerView.swift in Sources */,
 				EB49F56B27ADB42000F2400C /* ContentView.swift in Sources */,
+				EB3F961627B60D8E002012AB /* TimerOptions.swift in Sources */,
 				647CFD862762B100004ECA44 /* NewTimerDialog.swift in Sources */,
 				EB4B33F527ACDEA000B2B178 /* GeneralSettingsPage.swift in Sources */,
 				EBE5769527168B2D007E9326 /* ListView.swift in Sources */,

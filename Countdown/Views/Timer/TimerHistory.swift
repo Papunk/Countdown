@@ -19,7 +19,6 @@ struct TimerHistory: View {
             }
         }
         .listStyle(.inset(alternatesRowBackgrounds: true))
-        .cornerRadius(10)
     }
 }
 

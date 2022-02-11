@@ -11,17 +11,17 @@ struct SettingsView: View {
     var body: some View {
         TabView {
             GeneralSettingsPage()
-            .tabItem {
-                Tab(systemName: "gearshape", text: "General")
-            }
+                .tabItem {
+                    Tab(systemName: "gearshape", text: "General")
+                }
             GeneralSettingsPage()
-            .tabItem {
-                Tab(systemName: "paintbrush", text: "Customization")
-            }
+                .tabItem {
+                    Tab(systemName: "paintbrush", text: "Customization")
+                }
             GeneralSettingsPage()
-            .tabItem {
-                Tab(systemName: "keyboard", text: "Shortcuts")
-            }
+                .tabItem {
+                    Tab(systemName: "keyboard", text: "Shortcuts")
+                }
         }
     }
 }
