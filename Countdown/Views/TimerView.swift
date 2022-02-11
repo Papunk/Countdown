@@ -27,6 +27,7 @@ struct TimerView: View {
                 Divider()
                 Text(timer.format()).font(.system(size: 24, design: .monospaced))
             }
+            .padding()
         }
     }
 }

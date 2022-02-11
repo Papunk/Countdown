@@ -23,7 +23,8 @@ struct ListView: View {
                         NavigationLink(destination: TimerView(timer: timer, clock: $masterClock)) {
                             Text(timer.name!).fontWeight(.medium)
                             Spacer()
-                            Text(timer.format()).fontWeight(timer.isActive ? .bold : .light)
+                            Text(timer.format())
+                                .font(.system(size: 14, weight: timer.isActive ? .bold : .regular, design: .monospaced))
                                 .onReceive(masterClock, perform: { t in
                                     if timer.isActive {
                                         timer.decrement()
