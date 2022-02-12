@@ -18,28 +18,21 @@ struct TimerView: View {
                 HStack {
                     Text(name).font(.system(size: 30, weight: .bold,  design: .default))
                     Spacer()
-                    // TODO make a struct for this type of button
-                    Group {
-                        // TODO make this button look disabled when it has to
-                        Button(action: { timer.reset() }, label: {
-                            Image(systemName: "arrow.counterclockwise")
-                                .font(.system(size: 14, weight: .heavy))
-                                .frame(width: 10, height: 10)
-                                .padding()
-                        })
-                            .disabled(!timer.isActive)
-                            .background(Color.secondary.opacity(0.5))
-                        Button(action: { timer.isActive.toggle() }, label: {
-                            Text(timer.isActive ? "Pause" : "Start").fontWeight(.semibold)
-                                .frame(width: 40, height: 10)
-                                .padding()
-                        })
-
-                            .background(timer.isActive ? .red.opacity(0.8) : .blue.opacity(0.8))
-                    }
-                    .buttonStyle(.borderless)
-                    .foregroundColor(.primary)
-                    .cornerRadius(10)
+                    // TODO make this button look disabled when it has to
+                    CustomButton(width: 10,
+                                 color: .secondary,
+                                 opacity: 0.5,
+                                 action: { timer.reset() },
+                                 content: { Image(systemName: "arrow.counterclockwise").font(.system(size: 14, weight: .heavy)) }
+                    )
+                        .disabled(!timer.isActive)
+                    CustomButton(width: 40,
+                                 height: 10,
+                                 color: timer.isActive ? .red : .blue,
+                                 opacity: 0.8,
+                                 action: { timer.isActive.toggle()},
+                                 content: { Text(timer.isActive ? "Pause" : "Start").fontWeight(.semibold) }
+                    )
                 }
                 Divider()
                 Text(timer.format()).font(.system(size: 24, design: .monospaced))
