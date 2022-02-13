@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ A custom template for buttons throughout the application
+ */
 struct CustomButton<Content: View>: View {
     
     var width: CGFloat
